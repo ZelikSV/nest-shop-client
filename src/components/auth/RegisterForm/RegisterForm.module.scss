@@ -1,0 +1,30 @@
+@use '@/styles/variables' as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $spacing-sm;
+}
+
+.error {
+  color: $danger;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: $gray-600;
+
+  a {
+    color: $primary;
+    font-weight: 500;
+  }
+}

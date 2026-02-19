@@ -1,0 +1,149 @@
+@use '@/styles/variables' as *;
+
+.page {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  flex-wrap: wrap;
+}
+
+.id {
+  font-family: monospace;
+  font-size: 1rem;
+  color: $gray-600;
+}
+
+.meta {
+  background: $gray-50;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  display: flex;
+  gap: $spacing-xl;
+}
+
+.label {
+  display: block;
+  font-size: 0.75rem;
+  color: $gray-400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.total {
+  font-weight: 700;
+  color: $primary;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+
+  th, td {
+    padding: $spacing-sm $spacing-md;
+    text-align: left;
+    border-bottom: 1px solid $gray-100;
+  }
+
+  th {
+    font-weight: 600;
+    color: $gray-600;
+    background: $gray-50;
+  }
+}
+
+.mono {
+  font-family: monospace;
+  font-size: 0.8rem;
+  color: $gray-600;
+}
+
+.error {
+  text-align: center;
+  color: $danger;
+  padding: $spacing-xl;
+}
+
+.invoice {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $gray-900;
+  }
+}
+
+.invoiceRow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.invoiceEmpty {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.invoiceLink {
+  font-size: 0.875rem;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.uploadBtn {
+  display: inline-block;
+  padding: $spacing-xs $spacing-md;
+  background: $primary;
+  color: #fff;
+  border-radius: $radius-sm;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: $gray-400;
+  margin: 0;
+}
+
+.uploadError {
+  font-size: 0.8rem;
+  color: $danger;
+  margin: 0;
+}
+
+.uploadSuccess {
+  font-size: 0.8rem;
+  color: $success;
+  font-weight: 500;
+  margin: 0;
+}

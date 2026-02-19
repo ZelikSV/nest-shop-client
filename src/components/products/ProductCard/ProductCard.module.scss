@@ -1,0 +1,55 @@
+@use '@/styles/variables' as *;
+
+.card {
+  background: #fff;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  transition: box-shadow 0.15s;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $gray-900;
+}
+
+.description {
+  font-size: 0.875rem;
+  color: $gray-600;
+  flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: $spacing-xs;
+}
+
+.price {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $primary;
+}
+
+.stock {
+  font-size: 0.75rem;
+  color: $gray-400;
+}
+
+.outOfStock {
+  font-size: 0.75rem;
+  color: $danger;
+}

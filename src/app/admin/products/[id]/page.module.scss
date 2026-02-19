@@ -1,0 +1,11 @@
+@use '@/styles/variables' as *;
+
+.heading {
+  margin-bottom: $spacing-lg;
+}
+
+.error {
+  color: $danger;
+  text-align: center;
+  padding: $spacing-xl;
+}

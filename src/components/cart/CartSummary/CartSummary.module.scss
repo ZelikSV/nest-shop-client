@@ -1,0 +1,28 @@
+@use '@/styles/variables' as *;
+
+.summary {
+  background: $gray-50;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: $gray-600;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: $gray-900;
+  padding-top: $spacing-sm;
+  border-top: 1px solid $gray-200;
+}

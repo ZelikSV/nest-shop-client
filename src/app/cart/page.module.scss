@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.heading {
+  margin-bottom: 0;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: $spacing-lg;
+  align-items: flex-start;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.items {
+  background: #fff;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+}
+
+.sidebar {
+  position: sticky;
+  top: 80px;
+}
+
+.empty {
+  text-align: center;
+  padding: $spacing-xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  color: $gray-600;
+}

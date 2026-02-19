@@ -1,0 +1,58 @@
+@use '@/styles/variables' as *;
+
+.heading {
+  margin-bottom: $spacing-lg;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: $radius-md;
+  overflow: hidden;
+  border: 1px solid $gray-200;
+  font-size: 0.875rem;
+
+  th, td {
+    padding: $spacing-sm $spacing-md;
+    text-align: left;
+    border-bottom: 1px solid $gray-100;
+  }
+
+  th {
+    font-weight: 600;
+    color: $gray-600;
+    background: $gray-50;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+  tr:hover td {
+    background: $gray-50;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-xs;
+}
+
+.roleAdmin {
+  background: #dbeafe;
+  color: #1e40af;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.roleCustomer {
+  background: $gray-100;
+  color: $gray-600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}

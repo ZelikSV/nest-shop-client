@@ -1,0 +1,120 @@
+@use '@/styles/variables' as *;
+
+.page {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $gray-900;
+  }
+}
+
+.card {
+  background: #fff;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  padding: $spacing-lg;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-lg;
+}
+
+.avatarSection {
+  display: flex;
+  align-items: center;
+  gap: $spacing-lg;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid $gray-200;
+  flex-shrink: 0;
+}
+
+.avatarPlaceholder {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: $primary;
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  letter-spacing: 0.05em;
+}
+
+.avatarActions {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.uploadBtn {
+  display: inline-block;
+  padding: $spacing-sm $spacing-md;
+  background: $primary;
+  color: #fff;
+  border-radius: $radius-sm;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: $gray-400;
+  margin: 0;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: $danger;
+  margin: 0;
+}
+
+.successMsg {
+  font-size: 0.8rem;
+  color: $success;
+  margin: 0;
+  font-weight: 500;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+  border-top: 1px solid $gray-100;
+  padding-top: $spacing-md;
+}
+
+.row {
+  display: flex;
+  gap: $spacing-md;
+  font-size: 0.875rem;
+}
+
+.label {
+  width: 80px;
+  color: $gray-400;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-top: 2px;
+  flex-shrink: 0;
+}

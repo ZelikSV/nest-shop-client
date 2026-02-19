@@ -1,0 +1,44 @@
+@use '@/styles/variables' as *;
+
+.container {
+  position: fixed;
+  top: $spacing-lg;
+  right: $spacing-lg;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  padding: $spacing-sm $spacing-md;
+  border-radius: $radius-md;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  font-size: 0.875rem;
+  font-weight: 500;
+  min-width: 260px;
+  animation: slide-in 0.2s ease;
+
+  &.success {
+    background-color: $success;
+    color: #fff;
+  }
+
+  &.error {
+    background-color: $danger;
+    color: #fff;
+  }
+
+  &.info {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+@keyframes slide-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}

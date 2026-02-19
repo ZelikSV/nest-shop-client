@@ -1,0 +1,75 @@
+@use '@/styles/variables' as *;
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md 0;
+  border-bottom: 1px solid $gray-100;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.info {
+  flex: 1;
+}
+
+.name {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.price {
+  font-size: 0.8rem;
+  color: $gray-600;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+}
+
+.qtyBtn {
+  background: $gray-100;
+  border: none;
+  border-radius: $radius-sm;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: $gray-200;
+  }
+}
+
+.qtyValue {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.total {
+  font-weight: 600;
+  min-width: 60px;
+  text-align: right;
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $danger;
+  padding: $spacing-xs;
+  font-size: 0.875rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

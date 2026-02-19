@@ -1,0 +1,23 @@
+@use '@/styles/variables' as *;
+
+.heading {
+  margin-bottom: $spacing-lg;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+  max-width: 480px;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-sm;
+  justify-content: flex-end;
+}
+
+.error {
+  color: $danger;
+  font-size: 0.875rem;
+}

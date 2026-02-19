@@ -1,0 +1,130 @@
+@use '@/styles/variables' as *;
+
+.header {
+  background-color: #fff;
+  border-bottom: 1px solid $gray-200;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $spacing-md;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.navLink {
+  font-size: 0.875rem;
+  color: $gray-600;
+  text-decoration: none;
+  transition: color 0.15s;
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+
+  &.active {
+    color: $primary;
+    font-weight: 500;
+  }
+}
+
+.cartBtn {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: $gray-600;
+  font-size: 1.25rem;
+  padding: $spacing-xs;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.cartCount {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background-color: $danger;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: $spacing-sm;
+  font-size: 0.875rem;
+  color: $gray-600;
+}
+
+.profileLink {
+  display: flex;
+  align-items: center;
+  gap: $spacing-xs;
+  text-decoration: none;
+  color: $gray-600;
+  font-size: 0.875rem;
+
+  &:hover {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+.avatarThumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid $gray-200;
+}
+
+.avatarInitials {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: $primary;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}

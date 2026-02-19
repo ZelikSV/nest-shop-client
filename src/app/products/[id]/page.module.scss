@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+
+.page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.content {
+  background: #fff;
+  border: 1px solid $gray-200;
+  border-radius: $radius-lg;
+  padding: $spacing-xl;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.name {
+  font-size: 1.75rem;
+}
+
+.description {
+  color: $gray-600;
+  line-height: 1.7;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary;
+}
+
+.inStock  { font-size: 0.875rem; color: $success; }
+.outOfStock { font-size: 0.875rem; color: $danger; }
+
+.error {
+  text-align: center;
+  color: $danger;
+  padding: $spacing-xl;
+}

@@ -1,0 +1,18 @@
+@use '@/styles/variables' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: $spacing-md;
+
+  @media (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+.empty {
+  text-align: center;
+  color: $gray-400;
+  padding: $spacing-xl;
+  grid-column: 1 / -1;
+}

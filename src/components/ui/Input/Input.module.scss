@@ -1,0 +1,43 @@
+@use '@/styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: $gray-900;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $gray-200;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color 0.15s;
+  background-color: #fff;
+  color: $gray-900;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+
+  &.hasError {
+    border-color: $danger;
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+    }
+  }
+}
+
+.error {
+  font-size: 0.8rem;
+  color: $danger;
+}

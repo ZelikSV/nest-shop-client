@@ -1,0 +1,74 @@
+@use '@/styles/variables' as *;
+@use 'sass:color';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $spacing-xs;
+  border: none;
+  border-radius: $radius-md;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: opacity 0.15s, background-color 0.15s;
+  text-decoration: none;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  // Sizes
+  &.sm {
+    padding: $spacing-xs $spacing-sm;
+    font-size: 0.8rem;
+  }
+
+  &.md {
+    padding: $spacing-sm $spacing-md;
+  }
+
+  &.lg {
+    padding: $spacing-md $spacing-lg;
+    font-size: 1rem;
+  }
+
+  // Variants
+  &.primary {
+    background-color: $primary;
+    color: #fff;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust(#2563eb, $lightness: -8%);
+    }
+  }
+
+  &.danger {
+    background-color: $danger;
+    color: #fff;
+
+    &:hover:not(:disabled) {
+      background-color: color.adjust(#dc2626, $lightness: -8%);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(37, 99, 235, 0.08);
+    }
+  }
+
+  &.ghost {
+    background-color: transparent;
+    color: $gray-600;
+
+    &:hover:not(:disabled) {
+      background-color: $gray-100;
+    }
+  }
+}
