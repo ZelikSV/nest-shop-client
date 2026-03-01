@@ -24,7 +24,7 @@ export interface Product {
   updatedAt: string;
 }
 
-export type OrderStatus = 'PENDING' | 'CONFIRMED' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED';
+export type OrderStatus = 'PENDING' | 'CONFIRMED' | 'SHIPPED' | 'DELIVERED' | 'CANCELLED' | 'PROCESSED';
 
 export interface OrderItem {
   id: string;
@@ -96,14 +96,16 @@ export interface CreateOrderDto {
   items: { productId: string; quantity: number }[];
 }
 
-// GraphQL types
-export interface OrderFilterInput {
+// GraphQL input types — match schema: OrdersFilterInput, OrdersPaginationInput
+export interface OrdersFilterInput {
   status?: OrderStatus;
+  dateFrom?: string;
+  dateTo?: string;
 }
 
-export interface PaginationInput {
-  page?: number;
+export interface OrdersPaginationInput {
   limit?: number;
+  offset?: number;
 }
 
 export interface GetOrdersQueryResult {

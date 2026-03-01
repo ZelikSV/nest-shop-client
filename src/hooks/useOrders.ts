@@ -1,14 +1,14 @@
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { ordersGql } from '@/lib/graphql/queries/orders';
 import { ordersApi } from '@/lib/api/orders';
-import type { CreateOrderDto, OrderFilterInput, PaginationInput } from '@/types';
+import type { CreateOrderDto, OrdersFilterInput, OrdersPaginationInput } from '@/types';
 
 export const ORDERS_KEY = ['orders'] as const;
 
 export function useOrders(
   userId: string,
-  filter?: OrderFilterInput,
-  pagination?: PaginationInput,
+  filter?: OrdersFilterInput,
+  pagination?: OrdersPaginationInput,
 ) {
   return useQuery({
     queryKey: [...ORDERS_KEY, userId, filter, pagination],

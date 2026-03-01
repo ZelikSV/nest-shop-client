@@ -11,6 +11,7 @@ const STATUS_LABELS: Record<OrderStatus, string> = {
   SHIPPED:   'Shipped',
   DELIVERED: 'Delivered',
   CANCELLED: 'Cancelled',
+  PROCESSED: 'Processed',
 };
 
 export function Badge({ status }: BadgeProps) {

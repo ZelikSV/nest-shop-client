@@ -1,9 +1,9 @@
 import { gql } from 'graphql-request';
-import type { Order, OrderFilterInput, PaginationInput, GetOrdersQueryResult } from '@/types';
+import type { Order, OrdersFilterInput, OrdersPaginationInput, GetOrdersQueryResult } from '@/types';
 import { getGqlClient } from '../client';
 
 const GET_ORDERS = gql`
-  query GetOrders($userId: String!, $filter: OrderFilterInput, $pagination: PaginationInput) {
+  query GetOrders($userId: ID!, $filter: OrdersFilterInput, $pagination: OrdersPaginationInput) {
     orders(userId: $userId, filter: $filter, pagination: $pagination) {
       id
       status
@@ -36,7 +36,7 @@ const GET_ORDER_BY_ID = gql`
 `;
 
 export const ordersGql = {
-  getByUser: (userId: string, filter?: OrderFilterInput, pagination?: PaginationInput) =>
+  getByUser: (userId: string, filter?: OrdersFilterInput, pagination?: OrdersPaginationInput) =>
     getGqlClient().request<GetOrdersQueryResult>(GET_ORDERS, { userId, filter, pagination }),
 
   getById: (id: string) =>

@@ -4,16 +4,16 @@ import { useOrders } from '@/hooks/useOrders';
 import { useAuth } from '@/context/AuthContext';
 import { OrderList } from '@/components/orders/OrderList/OrderList';
 import { Spinner } from '@/components/ui/Spinner/Spinner';
-import type { OrderStatus, OrderFilterInput } from '@/types';
+import type { OrderStatus, OrdersFilterInput } from '@/types';
 import styles from './page.module.scss';
 
-const STATUS_OPTIONS: OrderStatus[] = ['PENDING', 'CONFIRMED', 'SHIPPED', 'DELIVERED', 'CANCELLED'];
+const STATUS_OPTIONS: OrderStatus[] = ['PENDING', 'CONFIRMED', 'SHIPPED', 'DELIVERED', 'CANCELLED', 'PROCESSED'];
 
 export default function OrdersPage() {
   const { user } = useAuth();
   const [statusFilter, setStatusFilter] = useState<OrderStatus | ''>('');
 
-  const filter: OrderFilterInput | undefined = statusFilter ? { status: statusFilter } : undefined;
+  const filter: OrdersFilterInput | undefined = statusFilter ? { status: statusFilter } : undefined;
 
   const { data: orders, isLoading, error } = useOrders(user?.id ?? '', filter);
 
