@@ -1,7 +1,7 @@
 import { GraphQLClient } from 'graphql-request';
 import { getToken } from '@/lib/utils/token';
 
-const GQL_URL = `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/api/graphql`;
+const GQL_URL = `${process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:3000'}/graphql`;
 
 // Factory — called on each request so the token is always fresh
 export const getGqlClient = () =>
